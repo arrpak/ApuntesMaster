@@ -1,0 +1,129 @@
+
+gedit grepfileexamp.txt &
+gedit grepfileexamp.txt
+bg
+fg
+bg
+fg
+ll
+cat grepfileexamp.txt
+grep "This" grepfileexamp.txt
+grep -i "This" grepfileexamp.txt
+grep -i -n "This" grepfileexamp.txt
+grep -i -c "This" grepfileexamp.txt
+grep -i -c -m 3 "This" grepfileexamp.txt
+grep -n "line" grepfileexamp.txt
+grep -n -w "line" grepfileexamp.txt
+cp grepfileexamp.txt grepfileexamp2.txt
+grep "the"  grepfileexamp* 
+grep -h -n -m 1 "the"  grepfileexamp* 
+grep -h -m 1 "the"  grepfileexamp* 
+grep -h "the"  grepfileexamp* 
+grep -b "line"  grepfileexamp.txt
+grep -b -o "line"  grepfileexamp.txt
+grep -A 2 -n "line"  grepfileexamp.txt
+grep -B 2 -n "line"  grepfileexamp.txt
+grep -C 1 -n "line"  grepfileexamp.txt
+grep -n -E "^This"  grepfileexamp.txt
+grep -n "^This"  grepfileexamp.txt
+grep -n "This"  grepfileexamp.txt
+grep -n "[Tt]his"  grepfileexamp.txt
+grep -n -E "[Tt]his"  grepfileexamp.txt
+grep -n -b -o -E "[Tt]his"  grepfileexamp.txt
+echo Sunday | sed 's/day/night/'
+echo Sunday | sed 's-day-night-'
+echo Sunday Sunday | sed 's-day-night-'
+echo Sunday Sunday | sed 's-day-night-g'
+echo 123 abc | sed 's/[0-9]*/(&)/'
+echo 123 abc | sed 's/[0-9]/(&)/'
+echo 123 abc | sed 's/[0-9]/(&)  (&)/'
+seq 10 | sed '2p'
+seq 10 | sed -n '2p'
+seq 10 | sed '1,8d'
+seq 10 | sed '1,8!d'
+cd Data/us_dot/traffic
+ll
+cd ..
+cd otp
+ll
+gunzip On_Time_On_Time_Performance_2015_1.zip
+gzip -d On_Time_On_Time_Performance_2015_1.zip
+cd ..
+cd traffic
+mkdir test
+cp T100_SEGMENT_ALL_CARRIER_2014.zip test
+cd test
+ll
+gzip -d T100_SEGMENT_ALL_CARRIER_2014.zip
+unzip T100_SEGMENT_ALL_CARRIER_2014.zip
+ll
+bzip2 914310910_T_T100_SEGMENT_ALL_CARRIER_2014_All.csv 
+ll
+bzcat 914310910_T_T100_SEGMENT_ALL_CARRIER_2014_All.csv.bz2 | head 
+bzcat 914310910_T_T100_SEGMENT_ALL_CARRIER_2014_All.csv.bz2 | tail
+cds
+cd
+psql
+psql -l
+psql
+psql -d facebook
+cd Data/opentraveldata
+ll
+rm .sh*
+rm a b.sh c.sh top.sh
+ll
+rm ref_airline_nb_of_flights.csv
+ll
+clear
+csvsql -help
+csvsql -help | less
+csvsql 
+clear
+csvsql -help | less
+csvsql -d "^" -i postgresql  
+csvsql -d "^" optd_aircraft.csv -i postgresql > create_table_optd_aircraft.sql  
+ll
+cat create_table_optd_aircraft.sql
+psql 
+psql -d optd -f create_table_optd_aircraft.sql
+psql optd 
+ll
+csvsql -d "^" optd_airlines.csv -i postgresql > create_table_optd_airlines.sql  
+csvsql -d "^" optd_por_public.csv -i postgresql > create_table_optd_por_public.sql  
+psql -d optd -f create_table_optd_airlines.sql
+psql -d optd -f create_table_optd_por_public.sql
+psql optd
+ll
+gedit create_table_optd_por_public.sql
+psql optd
+hist
+histoty
+history
+psql optd
+psql -d optd -f create_table_optd_por_public.sql
+psql optd
+ll
+csvgrep -d '^' -c "moddate" -r "^-1" |csvcut -c moddate | head
+csvgrep -d '^' -c "moddate" -r "^-1" optd_por_public.csv |csvcut -c moddate | head
+csvgrep -d '^' -c "moddate" -r "^-1$" optd_por_public.csv |csvcut -c moddate | head
+csvgrep -d '^' -c "moddate" -r "^-1$" optd_por_public.csv > optd_por_public_with_errors.csv
+csvgrep -d '^' -c "moddate" -r "^-1$" -i optd_por_public.csv | csvcut -c "moddate" | head
+csvgrep -d '^' -c "moddate" -r "^-1$" -i optd_por_public.csv > optd_por_public_without_errors.csv 
+ll
+wc -l optd_por_public.csv
+wc -l optd_por_public_with_errors.csv
+wc -l optd_por_public_without_errors.csv
+bc 910+17281-1
+bc "910+17281-1"
+echo "910+17281-1"|bc
+exit
+psql optd
+clear
+less optd_por_public_with_errors.csv
+sed -E 's/\,-1\,/\,\,/' optd_por_public_with_errors.csv >optd_por_public_with_errors_null.csv
+ll
+psql optd
+sed -E 's_\,-1\,_\,\,_' optd_por_public_with_errors.csv >optd_por_public_with_errors_null.csv
+psql optd
+exit
+ll

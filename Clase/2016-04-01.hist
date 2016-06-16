@@ -1,0 +1,147 @@
+less .zshrc
+seq 10
+seq 1 2 10
+seq 1 2 10 |grep 3
+echo "Hello World"
+echo "Hello" \\
+"world"
+echo "Hello world" |\
+wc 
+echo "Hello" |\
+"world"
+seq 10 |grep 2 >newfile
+seq 10 |grep 5 >>newfile
+less newfile
+echo "Hello">newfile2
+echo "world">>newfile2
+cat newfile2
+echo -n "Hello">newfile3
+echo -n " world">>newfile3
+cat newfile3
+wc -l < newfile 
+wc -l <newfile 
+<newfile wc -l
+echo "home dir $HOME"
+echo 'home dir $HOME'
+date
+echo "$date"
+echo '$date'
+echo `date`
+echo $(date      )
+echo $(       date      )
+echo `$HOME`
+ `echo $HOME`
+ls -lt
+ls -ltr
+ls -l -t -r
+ls -lSr
+ls -lS
+ll -lX
+ls -ld
+ls -ld *(/)
+ls -l *(.)
+ls -l (.)*
+ls -l1
+ls -1
+chmod g+x newfile
+ls -l newfile
+mv newfile bbbnbnb
+ls -l bbbnbnb
+mv newfile2 newfile3 Music
+ls -l Music
+ls Data/opentraveldata
+ls -l Data/opentraveldata
+find -type f -name "optd*" -size +1M
+touch testfind
+ls testfind
+ls -l testfind
+find -type f -empty
+find -type f -empty | wc -l
+find -maxdepth 3 -type f -empty | wc -l
+find -maxdepth 3 -type f -empty 
+find -maxdepth 3 -type f -mmin -30  
+find type f -mmin -30 |wc -l  
+find type -f -mmin -30 |wc -l  
+find -type f -mmin -30 |wc -l  
+find -type f -mmin -30
+mkdir newdir
+cd newdir
+touch first_file
+ls
+ls -l
+chmod o+w, g+x first_file
+chmod o+w,g+x first_file
+find -type -f -newermt 2016-01-01 
+find -type f -newermt 2016-01-01 
+find -type f -newermt 2016-04-01 
+find -mindepth 1 -file f -empty -mmin 60  
+find -mindepth 1 -type f -empty -mmin 60  
+find -type f -empty -mmin 60 -mindepth 1
+find -mindepth 1 -type f -empty -mmin 60 ! -perm 777  
+find -type f -empty -mmin 60 ! -perm 777  
+gedit text&
+find -type f -empty -mmin 60 ! -perm 777 -ok chmod 777 {}\;  
+find -type f -empty -mmin 60 ! -perm 777 -ok chmod 777 {} \;  
+tree
+tree > treefile
+less treefile
+man tree
+tree -L 2
+man csvlook
+csvlook -help 
+csvlook -help | less
+gedit textfile
+less .history
+gedit textsample.txt
+gedit textsample.txt &
+cat textsample.txt 
+cat -n textsample.txt 
+cat -n -s textsample.txt 
+cat -n -s -T textsample.txt 
+man man
+man -E man
+man -E sed
+man sed | less -E -N
+man sed | less -E
+man sed | less 
+seq 15> 20lines.txt; seq 9 1 20 >> 20lines.txt; echo"20\n20" >> 20lines.txt; 
+seq 15> 20lines.txt; seq 9 1 20 >> 20lines.txt; echo "20\n20" >> 20lines.txt; 
+cat 20lines.txt
+sort -d 20lines.txt
+sort -d 20lines.txt | less
+sort -nu 20lines.txt 20lines2.txt
+sort -nu 20lines.txt | less 
+sort -ng 20lines.txt 
+sort -g 20lines.txt 
+sort -gu 20lines.txt 
+sort -n 20lines.txt 
+sort -n 20lines.txt  | uniq -d
+sort -n 20lines.txt  | uniq -d -c
+sort -n 20lines.txt  | uniq -d -c | sort 
+sort -n 20lines.txt  | uniq -d -c | sort -n
+sort -n 20lines.txt  | uniq -d -c | sort -nr
+sort -n 20lines.txt  | uniq -d -c | sort -nr | head -1
+seq 0 2 40 > 20lines2.txt
+cat 20lines2.txt
+sort -nu 20lines.txt 20lines2.txt >sin_dupl.txt
+less sin_dupl.txt
+sort -t "^" -k7nr,7 optd_aircraft.csv | head -1 
+sort -t "^" -k 7 -n -r optd_aircraft.csv | head -1 
+less Finn.txt
+cd Data/opentraveldata
+less optd_aircraft.csv
+seq 10 
+seq 10 | paste -s
+seq 10 | paste -s -d "^"
+seq 10 | paste --
+seq 10 | paste - -
+seq 10 | paste - - -
+seq 10 | paste -d "^" - - -
+ll
+paste <(seq 10) <(head optd_aircraft.csv -1)
+paste <(seq 10) <(head -1 optd_aircraft.csv )
+paste <(seq 10) <(head -1 optd_aircraft.csv)
+paste <(seq 10) <(seq 10)
+paste <(seq 10) <(head -1 optd_aircraft.csv | tr "^" "\n")
+paste <(seq 10) 
+

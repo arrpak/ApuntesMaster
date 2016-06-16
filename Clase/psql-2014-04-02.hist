@@ -1,0 +1,183 @@
+\l
+\d
+\q
+\c dsc
+\c dsc
+\! pwd
+\! ls -l
+\l
+\! clear
+create database facebook;
+clear
+create database facebook;
+drop database facebook;
+create database facebook;
+\c facebook 
+\d
+\d
+create table amigos (
+nombre varchar,
+edad int,
+email varchar);
+\d
+\d amigos 
+drop table amigos;
+\d
+create table amigos (
+nombre varchar,
+edad int,
+email varchar);
+\d 
+insert into amigos values ('Lionel Messi', 27, 'messi@fcbarcelona.com');
+\d amigos 
+select * from amigos;
+insert into amigos values ('Lionel Messi', 27, 'messi@fcbarcelona.com');
+select * from amigos;
+insert into amigos values ('Ronaldo', 30 );
+select * from amigos;
+insert into amigos values ('Anna', 'anna@gmail.com' );
+insert into amigos (nomre, email) values ('Anna', 'anna@gmail.com' );
+insert into amigos (nombre, email) values ('Anna', 'anna@gmail.com' );
+insert into amigos values ('Anna',, 'anna@gmail.com' );
+insert into amigos values ('Anna',null, 'anna@gmail.com' );
+insert into amigos values ('Anna',, 'anna@gmail.com' );
+select * from amigos;
+select edad, nombre from amigos;
+select edad, nombre from amigos where edad<30;
+select edad, nombre from amigos where edad<>27;
+select edad, nombre from amigos where edad<27 or edad>27;
+insert into amigos values ('Anna R',76, 'annae@gmail.com' ),;
+insert into amigos values ('Anna R',76, 'annae@gmail.com' ),
+('Van Diesel', 45,'diesel@yahoo.com');
+select * from amigos;
+insert into amigos values ('gnna',47, 'gnae@gmail.com' ),
+('Dir', 15,'diel@yahoo.com');
+select * from amigos where edad<18 or edad>65;
+alter table amigos add column residencia varchar;
+\d
+\d amigos 
+select * FROM AmiGos;
+SELECT * FROM amigos;
+select * from amigos ;
+alter table amigos add residencia2 varchar;
+alter table amigos drop column  residencia2;
+alter table amigos add residencia2 varchar;
+alter table amigos drop residencia2;
+select * from amigos ;
+update amigos SET residencia='Madrid';
+select * from amigos ;
+alter table amigos add estado;
+alter table amigos add estado varchar;
+update amigos SET estado='bloqueado' WHERE edad<18;
+select * from amigos ;
+select * from amigos WHERE edad IS NULL;
+select * from amigos WHERE edad IS NOT NULL;
+select *, edad*2 from amigos;
+select *, edad*2 as doble from amigos;
+select *, edad*2 as doble from amigos where (edad*2)<100;
+select nombre from amigos;
+select distinct nombre from amigos;
+select * from amigos order by edad;
+select * from amigos order by edad DESC;
+select * from amigos order by edad DESC, nombre;
+select * from amigos order by edad DESC, nombre DESC;
+select * from amigos order ;
+select * from amigos order by edad limit 5;
+select * from amigos order by edad offset 3 limit 5;
+select * from amigos where edad BETWEEN 18 AND 30;
+select * from amigos where edad NOT BETWEEN 18 AND 30;
+select * from amigos where edad NOT IN (15,16,19);
+select * from amigos where edad IN (15,16,19);
+select avg(edad), min(edad), max(edad) from amigos;
+select avg(edad), min(edad), max(edad), count(*) from amigos;
+select avg(edad), min(edad), max(edad), count(*), count(edad) from amigos;
+select * from amigos;
+select avg(edad), min(edad), max(edad), count(*), count(edad), sum(edad) from amigos;
+select 267/7;
+update amigos set residencia='Barcelona' where edad=27;
+select * from amigos;
+select residencia, edad, count(*) from amigos group by residencia, edad;
+select residencia, edad, count(*) from amigos group by residencia;
+select residencia, count(*) from amigos group by residencia;
+select upper('barcelona');
+select upper(residencia), count(*) from amigos group by upper(residencia);
+\q
+create database optd;
+drop database optd;
+create database optd;
+\l
+\d
+\d optd_aircraft 
+\copy optd_aircraft from ./optd_aircraft.csv delimiter '^' csv header;
+\! pwd
+select * from optd_aircraft limit 10;
+\x
+select * from optd_aircraft limit 10;
+\x
+\q
+\copy optd_airlines from ./optd_airlines.csv delimiter '^' csv header;
+\copy optd_por_public from ./optd_por_public.csv delimiter '^' csv header;
+drop table optd_por_public;
+\! hist
+\! history
+\! (history)
+;
+\! clear
+\copy optd_por_public from ./optd_por_public.csv delimiter '^' csv header;
+/q
+\q
+\d optd_por_public 
+\copy optd_por_public from ./optd_por_public.csv delimiter '^' csv header;
+\copy optd_por_public from ./optd_por_public.csv delimiter '^' csv header;
+\copy optd_por_public from ./optd_por_public_without_errors.csv  delimiter ',' csv header;
+\q
+\copy optd_por_public from ./optd_por_public_with_errors_null.csv  delimiter ',' csv header;
+\q
+select country_code, Count(*) as nairports from optd_por_public where location_type='A' or location_type='CA' group by country code;
+select country_code, Count(*) as nairports from optd_por_public where location_type='A' or location_type='CA' group by country_code;
+select country_code, Count(*) as nairports from optd_por_public where location_type='A' or location_type='CA' group by country_code ha
+ving count(*)>100;
+create table airports as select country_code, Count(*) as nairports from optd_por_public where location_type='A' or location_type='CA'
+ group by country_code having count(*)>100;
+\d
+select country_code, sum(population) as npop from optd_por_public where population is NOT NULL group by country_code;
+select country_code, sum(population) as npop from optd_por_public where population is NOT NULL group by country_code having sum(popula
+tion)>20000000;
+create table population as select country_code, sum(population) as npop from optd_por_public where population is NOT NULL group by cou
+ntry_code having sum(population)>20000000;
+select country_code, country_name from optd_por_public;
+select distinct country_code, country_name from optd_por_public;
+create table country_name as select distinct country_code, country_name from optd_por_public;
+\d
+SELECT i.country_code FROM population AS i INNER JOIN
+airports AS d ON i.country_code= d.country_code;
+SELECT i.country_code, i.npop FROM population AS i INNER JOIN
+airports AS d ON i.country_code= d.country_code;
+SELECT i.country_code, i.npop,d.nairports  FROM population AS i INNER JOIN
+airports AS d ON i.country_code= d.country_code;
+SELECT i.country_code, i.npop,d.nairports, d.country_code  FROM population AS i INNER JOIN
+airports AS d ON i.country_code= d.country_code;
+SELECT i.country_code, i.npop,d.nairports, d.country_code  FROM population AS i LEFT OUTER JOIN
+airports AS d ON i.country_code= d.country_code;
+SELECT i.country_code, i.npop,d.nairports, d.country_code  FROM population AS i RIGHT OUTER JOIN
+airports AS d ON i.country_code= d.country_code;
+SELECT i.country_code, i.npop,d.nairports, d.country_code  FROM population AS i RIGHT JOIN
+airports AS d ON i.country_code= d.country_code;
+SELECT i.country_code, i.npop,d.nairports, d.country_code  FROM population AS i FULL JOIN
+airports AS d ON i.country_code= d.country_code;
+SELECT CASE WHEN i.country_code is NULL then d.country_code else i.country_code end as country_code, i.npop,d.nairports, FROM populati
+on AS i FULL JOIN
+airports AS d ON i.country_code= d.country_code;
+SELECT CASE WHEN i.country_code is NULL then d.country_code else i.country_code end as country_code, i.npop, d.nairports FROM populati
+on AS i FULL JOIN
+airports AS d ON i.country_code= d.country_code;
+SELECT CASE WHEN i.country_code is NULL then d.country_code else i.country_code end as country_code, i.npop, d.nairports FROM populati
+on AS i FULL JOIN
+airports AS d ON i.country_code= d.country_code;
+SELECT CASE WHEN i.country_code is NULL then d.country_code else i.country_code end as country_code, i.npop, d.nairports FROM populati
+on AS i FULL JOIN
+airports AS d ON i.country_code= d.country_code;
+SELECT CASE WHEN i.country_code is NULL then d.country_code else i.country_code end as country_code, i.npop, d.nairports FROM populati
+on AS i FULL JOIN
+airports AS d ON i.country_code= d.country_code;
+

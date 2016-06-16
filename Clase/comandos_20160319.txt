@@ -1,0 +1,194 @@
+ls Data/opentraveldata/ref_airline_nb_of_flights.csv
+man ls
+cat Data/opentraveldata/ref_airline_nb_of_flights.csv
+less Data/opentraveldata/ref_airline_nb_of_flights.csv
+dsfksfdkl
+sdf
+ls Data/opentraveldata
+while 1; do echo Infinito; done
+while True; do echo Infinito; done
+while true; do echo Infinito; done
+ls Data/opentraveldata/
+ll Data/opentraveldata/
+mkdir tmp
+cp Data/opentraveldata/optd_aircraft.csv tmp
+cd tmp
+ls
+ll
+less optd_aircraft.csv
+head optd_aircraft.csv
+head -3 optd_aircraft.csv
+sed 's/\^/ HOLA QUE TAL /' optd_aircraft.csv
+cat optd_aircraft.csv | head -3
+head -3 optd_aircraft.csv
+head -3 optd_aircraft.csv | sed 's/\^/ HOLA QUE TAL /'
+head -3 optd_aircraft.csv | sed 's/\^/ HOLA QUE TAL /g'
+head -3 optd_aircraft.csv | sed '/\^/ HOLA QUE TAL /g'
+head -3 optd_aircraft.csv | sed 's/\^/ HOLA QUE TAL /g'
+head -3 optd_aircraft.csv | sed 's/\^/|/g'
+head -3 optd_aircraft.csv | sed 's/\^/\t/g'
+head -3 optd_aircraft.csv | sed 's/\^/\t/g' | less
+head -3 optd_aircraft.csv | sed 's/\^/\t/g' | less -S
+head -3 optd_aircraft.csv | sed 's/\^/|/g' | less -S
+head -3 optd_aircraft.csv | sed 's/\^/|/g' | column -t -s '|' 
+head -3 optd_aircraft.csv | sed 's/\^/|/g' | column -t -s '|' less -S
+head -3 optd_aircraft.csv | sed 's/\^/|/g' | column -t -s '|' | less -S
+head -30 optd_aircraft.csv | column -t -s '^' | less -S
+head -3 optd_aircraft.csv | sed 's/\^/,/g' 
+cat optd_aircraft.csv | sed 's/\^/,/g' > preparado_para_excel.csv
+less preparado_para_excel.csv
+less optd_aircraft.csv
+head -3 preparado_para_excel.csv
+cat preparado_para_excel.csv | head -3
+head -3 optd_aircraft.csv| sed 's/^/,/g'
+head -3 optd_aircraft.csv| sed 's/\^/,/g'
+less -S optd_aircraft.csv
+cat optd_aircraft.csv| column -t -s '^' | less -S
+cat optd_aircraft.csv | column -t -s '^' | less
+cat optd_aircraft.csv | column -t -s '^' | less -S
+tail optd_aircraft.csv
+tail -n 3 optd_aircraft.csv
+tail -n+1 optd_aircraft.csv | less
+tail -n+2 optd_aircraft.csv | less
+head -3 optd_aircraft.csv| cut -d '^' -f 8
+head -3 optd_aircraft.csv| cut -d '^' -f 7
+head -5 optd_aircraft.csv| cut -d '^' -f 7
+head -5 optd_aircraft.csv| cut -d '^' -f 7,8
+head -5 optd_aircraft.csv| cut -d '^' -f 3-7
+head -5 optd_aircraft.csv| awk -F '^' '{print $7}' 
+head -5 optd_aircraft.csv| cut -d '^' -f 7
+cat optd_aircraft.csv | tail -n+2 | cut -d '^' -f 7 | head
+cat optd_aircraft.csv | tail -n+2 | cut -d '^' -f 7 | sort | head -5
+cat optd_aircraft.csv | tail -n+2 | cut -d '^' -f 7 | sort -r | head -5
+cat optd_aircraft.csv | tail -n+2 | cut -d '^' -f 7 | sort -r | uniq | head -5
+cat optd_aircraft.csv | tail -n+2 | cut -d '^' -f 7 | sort -r | uniq -c | head -5
+less optd_aircraft.csv
+head optd_aircraft.csv | cut -d '^' -f 2
+head optd_aircraft.csv| tail -n +2 | cut -d '^' -f 2
+head optd_aircraft.csv| tail -n +2 | cut -d '^' -f 2 | uniq -c
+head -50 optd_aircraft.csv| tail -n +2 | cut -d '^' -f 2 | uniq -c
+cat optd_aircraft.csv| tail -n +2 | cut -d '^' -f 2 | uniq -c
+cat optd_aircraft.csv| tail -n +2 | cut -d '^' -f 2 | uniq -c | head -20
+head optd_aircraft.csv| tail -n +2 | cut -d '^' -f 2 | sort| uniq -c 
+cat optd_aircraft.csv| tail -n +2 | cut -d '^' -f 2 | sort | uniq -c | head -20
+cat optd_aircraft.csv| tail -n +2 | cut -d '^' -f 2 | sort | uniq -c | head -20 | sort
+cat optd_aircraft.csv| tail -n +2 | cut -d '^' -f 2 | sort | uniq -c | head -20 | sort -n
+cat optd_aircraft.csv| tail -n +2 | cut -d '^' -f 2 | sort | uniq -c | head -20 | sort -n -r
+cat optd_aircraft.csv| tail -n +2 | cut -d '^' -f 2 | sort | uniq -c | sort -n -r
+cat optd_aircraft.csv| tail -n +2 | cut -d '^' -f 2 | sort | uniq -c | sort -n -r | head -5
+tail -n+2 optd_aircraft.csv | cut -d '^' -f 2 | sort | uniq -c | sort -n -r | head -5
+tail -n+2 optd_aircraft.csv | cut -d '^' -f 2 | sort | uniq -c | sort -n | tail -n 5
+man sort
+tail -n+2 optd_aircraft.csv | cut -d '^' -f 2 | sort | uniq -c | sort -g | tail -n 5
+kwrite top5.sh
+ls /bin/sh
+cd tmp
+ls
+ll
+groups
+ls ../
+l ../
+ll
+chmod u+x top5.sh
+ll
+chmod u-w top5.sh
+ll
+chmod u+w top5.sh
+ll
+ls
+chmod a+x top5.sh
+ll
+top5.sh parametro
+ls .
+echo $PATH
+./top5.sh parametro
+./top5.sh parametro mas cosas
+./top5.sh HOLA QUE TAL
+./top5.sh
+./top5.sh "HOLA QUE TAL"
+./top5.sh optd_aircraft.csv
+./top5.sh hola
+./top5.sh optd_aircraft.csv
+ll
+./top5.sh
+man wc
+wc optd_aircraft.csv
+wc -l optd_aircraft.csv
+man wc
+sudo pip install --upgrade csvkit
+dnf search csvkit
+csvlook optd_aircraft.csv
+csvlook optd_aircraft.csv| less
+csvlook -d '^' optd_aircraft.csv| less
+csvlook -d '^' optd_aircraft.csv| less -S
+csvstat -d '^' optd_aircraft.csv| less
+csvcut -d '^' -c manufacturer | head
+csvcut -d '^' -c manufacturer optd_aircraft.csv| head
+less optd_aircraft.csv
+grep 380 optd_aircraft.csv
+grep "^380" optd_aircraft.csv
+csvgrep -d '^' -c iata_code -m 380 optd_aircraft.csv
+csvgrep -d '^' -c iata_code -m 380 optd_aircraft.csv | csvlook | less -S
+csvlook -d '^' optd_aircraft.csv| less -S
+csvstat -d '^' optd_aircraft.csv| less
+csvcut -d '^' -c manufacturer optd_aircraft.csv| head
+grep "380" optd_aircraft.csv
+csvgrep -d '^' -c iata_code -m 380 optd_aircraft.csv
+man csvgrep
+csvgrep --help
+csvgrep -d '^' -c iata_code -m 380 optd_aircraft.csv
+grep "^380" optd_aircraft.csv
+csvcut -d '^' -c manufacturer optd_aircraft.csv| head
+csvcut -d '^' -c manufacturer optd_aircraft.csv
+csvgrep -d '^' -c iata_code -m 380 optd_aircraft.csv
+csvgrep -d '^' -c manufacturer -m Airbus optd_aircraft.csv | head
+csvgrep -d '^' -c manufacturer -m Airbus optd_aircraft.csv | csvlook | less -S
+csvgrep -d '^' -c manufacturer -m Airbus optd_aircraft.csv > airbus.csv
+less airbus.csv
+csvlook airbus.csv | less -S
+csvsort -c nb_engines -r airbus.csv | head -5
+csvsort -d '^' -c nb_engines -r optd_aircraft.csv| head -3
+csvsort -d '^' -c nb_engines -r optd_aircraft.csv| csvcut -c manufacturer,model
+csvsort -d '^' -c nb_engines -r optd_aircraft.csv| csvcut -c manufacturer,model|head
+csvsort -d '^' -c nb_engines -r optd_aircraft.csv| csvcut -c manufacturer,model|csvlook
+csvsort -d '^' -c nb_engines -r optd_aircraft.csv| csvcut -c manufacturer,model|head|}csvlook
+csvsort -d '^' -c nb_engines -r optd_aircraft.csv| csvcut -c manufacturer,model|head|csvlook
+csvsort -d '^' -c nb_engines -r optd_aircraft.csv| csvcut -c manufacturer,model,nb_engines | head|csvlook
+csvsort --help |less
+csvsql --help | more
+csvsql -d '^' optd_aircraft.csv|less
+csvsql -d '^' optd_aircraft.csv
+csvsql -d '^' -i postgresql optd_aircraft.csv
+csvsql -d '^' -i mysql optd_aircraft.csv
+csvsql -d '^' -i oracle optd_aircraft.csv
+sql2csv --help | more
+cp /home/dsc/Data/opentraveldata/optd_airlines.csv 
+cp /home/dsc/Data/opentraveldata/optd_airlines.csv .
+ll
+cp ~/Data/opentraveldata/ref_airline_nb_of_flights.csv .
+head optd_airlines.csv|csvlook -d '^' | less -S
+ll
+head ref_airline_nb_of_flights.csv|csvlook -d '^'
+csvjoin -d '^' ref_airline_nb_of_flights.csv optd_airlines.csv -c airline_code_2c,2char_code --left | head
+csvjoin -d '^' ref_airline_nb_of_flights.csv optd_airlines.csv -c airline_code_2c,2char_code --left | csvlook | less -S
+csvjoin -d '^' ref_airline_nb_of_flights.csv optd_airlines.csv -c airline_code_2c,2char_code --left | csvcut -c airline_code_2c,name,flight_freq | head | csvlook
+csvjoin -d '^' ref_airline_nb_of_flights.csv optd_airlines.csv -c airline_code_2c,2char_code --left | csvcut -c airline_code_2c,name,flight_freq | csvlook | head
+csvjoin -d '^' ref_airline_nb_of_flights.csv optd_airlines.csv -c airline_code_2c,2char_code --left | csvcut -c airline_code_2c,name,flight_freq | head | csvlook
+csvjson -d '^' ref_airline_nb_of_flights.csv | more
+csvjson -d '^' --indent 4 ref_airline_nb_of_flights.csv | more
+csvjson -d '^' --key airline_code_2c --indent 4 ref_airline_nb_of_flights.csv | more
+GeoBase MNL
+csvpy -d '^' ref_airline_nb_of_flights.csv
+csvjson -d '^' --key airline_code_2c --indent 4 ref_airline_nb_of_flights.csv | more
+csvpy -d '^' ref_airline_nb_of_flights.csv
+csvformat -D '^' ref_airline_nb_of_flights.csv| head
+csvformat -d '^' ref_airline_nb_of_flights.csv| head
+csvformat -d '^' -U 1 ref_airline_nb_of_flights.csv| head
+csvformat -d '^' -U 1 -T ref_airline_nb_of_flights.csv| head
+csvformat --help
+csvformat -d '^' -U 2 -T ref_airline_nb_of_flights.csv| head
+csvformat -d '^' -U 0 -T ref_airline_nb_of_flights.csv| head
+csvformat -d '^' -U 0 ref_airline_nb_of_flights.csv| head
+ll
+csvformat -d '^' ref_airline_nb_of_flights.csv| head
+csvformat -d '^' -T ref_airline_nb_of_flights.csv| head

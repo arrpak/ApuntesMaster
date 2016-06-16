@@ -1,0 +1,164 @@
+cd
+cd Repositories/
+pwd
+ls
+git clone https://github.com/iht/master-in-data-science-2nd-ed.git
+ls
+cd master-in-data-science-2nd-ed
+ls
+cat README.md
+kwrite hola.txt
+pwd
+kwrite hola.txt
+ls
+git status
+git add hola.txt
+git status
+git commit
+git status
+git push
+git remote
+git push origin master
+ls
+ls .git
+kwrite .git/config
+cd
+ls .gitconfig
+ls .git-credentials
+less .git-credentials
+cd
+pwd
+cat .git-credentials
+rm .git-credentials
+ls .gitconfig
+kwrite .gitconfig
+cd Repositories/master-in-data-science-2nd-ed
+git push origin master
+git pull
+git reset --hard HEAD
+git log
+git reset --hard aabe405e70b78908f3d5e2bbd21b3f247332036e
+cd ..
+rm -rf master-in-data-science-2nd-ed
+git clone https://github.com/iht/master-in-data-science-2nd-ed.git
+cd master-in-data-science-2nd-ed
+ls
+cd ..
+rm -rf master-in-data-science-2nd-ed
+git clone https://github.com/iht/master-2nd-ed.git
+cd master-2nd-ed
+kwrite hola.txt
+git status
+git add hola.txt
+git status
+git commit
+git status
+git remote
+git push origin master
+git credential-cache exit
+kwrite hola.txt
+git status
+git add hola.txt
+git status
+git commit
+git push
+git remote show origin
+git remote
+git remote show origin
+git remote remove origin
+git remote
+git push
+git remote add origin https://github.com/iht/master-2nd-ed.git
+git push
+git push origin master
+echo 3322 >> hola.txt
+git add hola.txt
+git commit
+git push
+git push origin master
+kwrite hola.txt
+git status
+git diff
+git add hola.txt
+git status
+git diff
+git diff --cached
+kwrite hola.txt
+git diff
+git status
+git add hola.txt
+git diff
+git diff --cached
+git commit
+ll
+kwrite hola.txt
+kwrite otro.txt
+ls
+git status
+git diff
+git diff --cached
+git add otro.txt
+git status
+git diff
+git diff --cached
+ls
+git status
+git add hola.txt
+git diff
+git diff --cached
+git commit
+ls
+rm otro.txt
+git reset --hard HEAD
+ll
+git rm otro.txt
+git status
+ll
+git reset HEAD otro.txt
+git status
+ll
+git checkout -- otro.txt
+ll
+cat otro.txt
+git rm otro.txt
+git status
+git commit
+git status
+git commit
+ll
+git log
+git reset 837f5a7f87c967ecb1e61fa68db410f5619285eb
+git reset --hard 837f5a7f87c967ecb1e61fa68db410f5619285eb
+git log
+qgit
+git push
+git push --set-upstream origin master
+qgit
+git log
+git branch
+git checkout otra_rama
+git checkout -b otra_rama
+kwrite mas_ficheros.txt
+git add mas_ficheros.txt
+git commit -m "Un nuevo fichero"
+qgit
+kwrite mas_ficheros.txt
+git add mas_ficheros.txt
+git commit
+qgit
+git checkout master
+ll
+kwrite otro.txt
+git add otro.txt
+git commit -m "Mas cosas"
+qgit
+okular ~/Downloads/First\ steps\ with\ Git.pdf
+less ~/.gitconfig
+ls
+ls D
+ls Data
+cd Repositories
+ls
+cd master-2nd-ed
+ls
+git blame hola.txt
